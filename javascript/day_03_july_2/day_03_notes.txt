@@ -1,0 +1,83 @@
+Q. What is the right place to include external javscript files.
+    <head></head> OR <body></body>
+
+Note: when javascript deals with DOM elements <script></script> should be placed in body
+otherwise it's okay to have the script on <head></head>
+
+HTML-5  introduced 2 attributes for <script></script>
+1. async 
+2. defer
+
+-async attribute ensures that the JavaScript file is loaded asynchronously in the background and does not block rendering.
+-defer attribute tells the browser to run the script after the document has been parsed
+
+https://flaviocopes.com/javascript-async-defer/
+
+
+
+HTML Emmets / shortcuts  https://docs.emmet.io/cheat-sheet/
+=======================
+!
+h1{Let's Learn HTML shortcuts}
+div#div1
+div#div1{I am a div with id div1}
+div.div2
+button.btn.btn-primary.mx-2
+ol>li*5{Country-$}
+select>option*10{Country-$}
+table>tbody>tr*20>td*5{Data-$}
+
+
+How to Write and Execute Javascript code
+=========================================
+1. Browser (FrontEnd Development)
+    a. Create a javascript file with some javascript code (abc.js)
+    b. include that javascript file into HTML file 
+       <script src='abc.js'></script>
+    c. open HTML file in browser (alt+b)
+
+2. NodeJS (BackEnd Development)
+   a. Create a javascript file with some javascript code (abc.js)
+   b. Run that javascript file with the below command
+      node <filename>.js   (make sure nodejs is installed)
+
+Note : Every javascript code that runs on browser might not run in nodejs, and vice-versa 
+
+
+
+Most Commonly Used javascript functions
+========================================
+console.log()          console:object , log:function
+document.write()       document:object , write:function
+window.alert()         window:object , alert:function
+
+
+    // log(`Addition of ${a} & ${b} is ${a + b}`); // No
+    // write(`Addition of ${a} & ${b} is ${a + b}`); // No
+    alert(`Addition of ${a} & ${b} is ${a + b}`);  // yes
+    this.alert(`Addition of ${a} & ${b} is ${a + b}`);  // yes
+
+    // Note: while using window object methods, using window.function is not mandatory
+    // window.alert(); // valid
+    // alert(); // valid
+
+
+Window object functions
+========================
+alert() : Display Some message
+          Message + ok
+
+confirm() : User Confirmation
+            Message + ok(true) + cancel(false)
+
+prompt() : to collect user input
+          message + inputbox + ok + cancel
+
+
+
+HomeWork/assignment
+===================
+1. Revise day-2 & day-3 discussions
+2. Practice Emmets
+3. Write a program , using prompt() ask user to enter 2 numbers, perform addition of those  2 numbers, display addition result
+4. Ask user to enter a number & check if that number is even or odd
