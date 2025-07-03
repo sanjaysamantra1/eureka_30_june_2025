@@ -58,3 +58,21 @@ convert typescript to javascript
    npm i -g typescript
 2. tsc <filename>.ts
 3. include the generated javascript file into html file
+
+
+variables
+=========
+-variables in javascript can be declared by using either 1 of the below 3 keyword
+1. var
+2. let
+3. const
+
+    var						let						 const
+======================================================================
+1.since begining		 1.ECMASCRIPT-6(2015)		1.ECMASCRIPT-6(2015)
+2.value can be changed   2.value can be changed     2.cann't be changed
+3.initialization is		 3.initialization is		3.mandatory
+	not mandatory           not mandatory	
+4.can be redeclared		 4.cann't be redeclared		4.cann't be redeclared
+5.function/global		 6.block/function/global	6.block/function/global
+6.TDZ - No			 	 5.TDZ - Yes				5.TDZ - Yes
