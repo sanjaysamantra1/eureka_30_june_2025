@@ -1,0 +1,60 @@
+Datatypes 
+=========
+-Type of data we are dealing with
+
+Primitive : 
+-immutable, compared by value
+-number,string, boolean,undefined, symbol, bigint
+
+Non-Primitive:
+-mutable, compared by referrence
+-Object ( Object & Array )
+
+
+
+undefined vs null
+=================
+-undefined is a value gets assigned by javascript for un-initialized variables
+ null is an intended value assigned by developers
+-typeof undefined is 'undefined'
+ typeof null value is 'object'
+
+ Note: even though typeof null is object, null is a primitive value
+
+
+
+ Javascript: is a programming language, follows ECMAScript standards
+ ECMA : European Computer Menufecturer Association
+ ECMAScript: set of rules & standards followed by javascript
+
+
+ES_5   <= june 2015
+ES_6   2015  ( const , let , class , extends , module , set, map..... )
+ES_7   2016  ( ** )
+ES_8   2017
+ES_9   2018
+ES_10   2019
+ES_11  2020
+ES_12   2021
+ES_13   2022
+ES_14   2023
+ES_15   2024
+
+
+    Javascript					 TypeScript
+---------------------------------------------------------
+1.strongly typed-No				1.strongly typed-yes
+2.directly run on browser		2.not directly run on the browser
+3.interface-No					3.interface - Yes
+4.optional parameters-No		4.optional parameters-yes
+5.interpreted language			5.compiles the code
+6.errors at runtime				6.errors during the development time
+7.generics-no					7.generics-yes
+
+
+convert typescript to javascript
+=================================
+1. install typescript
+   npm i -g typescript
+2. tsc <filename>.ts
+3. include the generated javascript file into html file
