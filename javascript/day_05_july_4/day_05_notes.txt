@@ -1,0 +1,56 @@
+4.can be redeclared		 4.cann't be redeclared		4.cann't be redeclared
+5.function/global		 6.block/function/global	6.block/function/global
+6.TDZ - No			 	 5.TDZ - Yes				5.TDZ - Yes
+
+
+Variables Scopes:
+==================
+1. global : declared outside function, visible to all the functions
+2. function : declared inside function, visible to only 1 function
+3. block : declared inside block, visible to only 1 block
+
+
+
+
+How Javascript Works
+====================
+-When a javascript code is executed, N # of execution contexts are created.
+-1 Global Execution context is created for every javascript program.
+-For Each Function call 1 execution context is created.
+-Execution context is the environment within which the current code is being executed.
+-Each execution context has two phases: 
+	1. creation phase. (Allocates memory - variables & functions and assign 'undefined' to variables)
+	2. execution phase. (Code gets Executed - assign values to variables & method invocation)
+
+
+https://www.youtube.com/watch?v=iLWTnMzWtj4&t=1044s
+https://www.jsv9000.app/
+
+
+
+Hoisting:
+=========
+-hoisting is a mechanism where variable and function declarations are moved to the top of their containing scope during the compilation phase, before the code is executed.
+-Variables declared with var are hoisted, but their values are not initialized. They are given an initial value of undefined.
+-Variables declared with let and const are also hoisted but are not initialized. Accessing them before declaration results in a ReferenceError because they are in the "temporal dead zone."
+-Function declarations are hoisted, meaning you can call them before they appear in the code.
+
+
+
+Type			   Hoisted?			   Initialized?			  Usable before declaration?
+=========================================================================================
+var					✅ Yes				❌ Undefined			⚠️ Allowed but undefined
+let					✅ Yes				❌ No					❌ ReferenceError
+const				✅ Yes				❌ No					❌ ReferenceError
+Func Declaration	✅ Yes				✅ Yes					✅ Allowed
+Func Expression 	✅ Yes				❌ Undefined			❌ TypeError
+
+
+
+Temporal Dead Zone
+==================
+-The period between entering scope and being initialized where they cannot be accessed. 
+ This period is the temporal dead zone (TDZ).
+-The state where variables are un-reachable. They are in memory, but they aren't usable.
+-The let and const variables exist in the TDZ from the start of their enclosing scope until they are initialized.
+-if a let/const variable is accessed before its initialization, it would throw a ReferenceError. Because of the TDZ.
