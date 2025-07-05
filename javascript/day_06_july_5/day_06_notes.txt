@@ -1,0 +1,68 @@
+Functions
+=========
+1. Pre-Defined : console.log(), window.alert(), Math.max()
+2. User Defined : we have to write the functions and use them
+   a. Function Declaration
+   b. Function Expression  
+   c. Self Invoked (IIFE)
+   d. Arrow Function
+
+
+Function Declaration Vs Function Expression
+===========================================
+1. Function Declarations are named function, Function Expressions are anonymous
+2. Function Declarations are hoisted, Function Expressions are not hoisted
+
+Self Invoked
+============
+-Immediately Invoked Function Expression
+-To invoke a block of code only 1 time 
+-IIFEs cann't be invoked more than 1
+
+
+Arrow Function
+==============
+-ECMAScript_6   2015
+-Concise syntax
+-implicit return
+-Lexical Scoping 
+-No 'this' binding
+-Better for callback function
+
+
+arr.map(function incrementBy5(val) {
+    return val + 5;
+});
+
+Higher Order Function
+=====================
+-A function that takes another function as argument, is called Higher Order Function
+-From the above example, map() is a higher order function
+
+CallBack Function
+=================
+-A function that is used as argument inside another function is called callback function
+-From the above example, incrementBy5 is callback function
+
+
+How 'this' works in regular function and arrow function
+=======================================================
+1. Regular functions have their own 'this' binding, 
+   Arrow Functions don't have their own 'this' , they use 'this' from lexical(the place where arrow function is declared / outer) scope
+
+2. Regular Function : this (How/where the function is called)
+   Arrow Function : this (Where the function is written)
+
+3. 'this' inside arrow function is static
+   'this' inside regular function is dynamic
+
+
+Arrow Function Limitations
+===========================
+-Don't use arrow functions inside object literals.
+-inside a function if we want 'this' value to be dynamic, don't use arrow function
+
+
+Where Arrow functions should be used over regular functions
+==========================================================
+1. when used as callback function
