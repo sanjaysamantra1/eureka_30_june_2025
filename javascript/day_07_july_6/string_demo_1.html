@@ -1,0 +1,23 @@
+<script>
+    let str = 'Hello World';
+    console.log(str.length); // 11
+
+    console.log(str.toUpperCase());
+    console.log(str.toLowerCase());
+
+    console.log(str.charAt(1)); // e
+    console.log(str.at(1)); // e
+
+    console.log(str.charAt(-1)); // e
+    console.log(str.at(-1)); // d  (works with both +ve and -ve index)
+
+    console.log(str.charCodeAt(1)); // e = 101
+
+    console.log('sachin'.concat(' tendulkar'));
+
+    console.log(str.indexOf('o'));  // 4
+    console.log(str.lastIndexOf('o'));  // 7
+
+    console.log(str.includes('Hello')); // true
+    console.log(str.includes('Hiiii')); // false
+</script>
