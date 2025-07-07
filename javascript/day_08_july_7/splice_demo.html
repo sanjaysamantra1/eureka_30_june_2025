@@ -1,0 +1,10 @@
+<script>
+    let arr = [10, 20, 30, 40, 50];
+    arr.splice(1, 2, 25, 35);
+    console.log(arr); // [10,25,35,,40,50]
+
+    // not to change the original array, toSpliced
+    let nums = [10, 20, 30, 40, 50];
+    let newArr = nums.toSpliced(1, 2, 25, 35);
+    console.log(nums, newArr);
+</script>

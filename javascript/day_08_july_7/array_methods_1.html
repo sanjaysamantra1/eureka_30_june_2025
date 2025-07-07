@@ -1,0 +1,25 @@
+<script>
+    let cars = ['Tata', 'Honda', 'Maruti'];
+
+    cars.push('Hyundai');
+    console.log('after push', cars); // ['Tata', 'Honda', 'Maruti','Hyundai']
+
+    cars.pop();
+    console.log('after pop', cars); // ['Tata', 'Honda', 'Maruti']
+
+    cars.unshift('Hyundai');
+    console.log('after unshift', cars);  // ['Hyundai' , 'Tata', 'Honda', 'Maruti'];
+
+    cars.shift();
+    console.log('after shift', cars); // ['Tata', 'Honda', 'Maruti']
+
+    // splice(ind , how many elements to delete , elements to insert)
+    cars.splice(1, 2, 'Mahindra', 'Toyota');  // both delete and insert
+    console.log('after splice-1', cars);   // ['Tata', 'Mahindra', 'Toyota']
+
+    cars.splice(1, 2);
+    console.log('after splice-2', cars); // ['Tata']
+
+    cars.splice(1, 0, 'Honda', 'Maruti');
+    console.log('after splice-2', cars); // ['Tata', 'Honda', 'Maruti']
+</script>
