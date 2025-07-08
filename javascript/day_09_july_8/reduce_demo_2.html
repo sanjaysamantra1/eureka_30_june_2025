@@ -1,0 +1,13 @@
+<script>
+    let str = 'entertainment';
+
+    let charMap = str.split('').reduce((obj, char) => {
+        if (obj[char]) {
+            obj[char]++
+        } else {
+            obj[char] = 1;
+        }
+        return obj
+    }, {});
+    console.log(charMap); // {e:3, n:3, ...}
+</script>

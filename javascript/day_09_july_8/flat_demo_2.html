@@ -1,0 +1,13 @@
+<script>
+    let arr = [10, 20, [50, 40, [50, 60, [70, 80, [90, 100]]]]];
+
+    let resultArr = arr.reduce((resultArr, ele) => {
+        if (Array.isArray(ele)) {
+
+        } else {
+            resultArr.push(ele);
+        }
+        return resultArr;
+    },[])
+    console.log(resultArr);  // incomplete code
+</script>
